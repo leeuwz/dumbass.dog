@@ -70,7 +70,7 @@ export default function Nav() {
                     />
                 </a>
                 <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.05] transition-all duration-50 ease-in-out'
-                href="https://github/leeuwz" target='_blank'>
+                href="https://github.com/leeuwz" target='_blank'>
                     <Image 
                         alt="github"
                         src="/icons/github.svg"
