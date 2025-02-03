@@ -47,7 +47,7 @@ export default function Projects() {
                         {/* project title & desc */}
                         <div className="flex flex-col gap-2">
                             <p className="text-lg font-medium font-[family-name:var(--font-unbounded)]">{project.title}</p>
-                            <p className="text-base font-[family-name:var(--font-sour-gummy)] max-w-[38%]">
+                            <p className="text-base font-[family-name:var(--font-sour-gummy)] max-w-[100%] lg:max-w-[38%]">
                                 {project.description}
                             </p>
                         </div>

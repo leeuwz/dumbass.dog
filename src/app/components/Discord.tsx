@@ -45,7 +45,7 @@ export default function Discord() {
         </div> */}
         <div>
             {/* Discord User */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 hidden xl:flex">
                 {/* Discord User Info && Profile Picture */}
                 <div className="flex flex-col text-end font-[family-name:var(--font-unbounded)] gap-1">
                     <p className="text-xl">@{status?.discord_user.username}</p>

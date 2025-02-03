@@ -48,7 +48,7 @@ export default function RootLayout({
         style={{
           transform: "rotate(200deg) scale(1.5)",
         }}></div>
-        <div className="max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)] p-4">
+        <div className="max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)] p-10">
           <Nav />
           {children}
           <Footer />

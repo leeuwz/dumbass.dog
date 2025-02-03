@@ -7,8 +7,7 @@ export default function Hero() {
             <p className="text-7xl font-bold font-[family-name:var(--font-unbounded)]"><span className="text-[#f97af8]">Li</span>onz</p>
             <div className="flex">
                 <p className="text-zinc-400 text-base font-[family-name:var(--font-sour-gummy)]">also known as @femd0g</p>
-                <div className='ml-1 flex gap-1 cursor-pointer' onContextMenu={(e) => e.preventDefault()}
-                    onClick={()=> window.open("https://youtu.be/D8sgmuthzlM", "_blank")}>
+                <div className='ml-1 flex gap-1 cursor-pointer' onContextMenu={(e) => e.preventDefault()}>
                     <Image 
                         alt="paws"
                         src="/emojis/paws.svg"

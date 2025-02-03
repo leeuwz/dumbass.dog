@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Nav() {
     return (
         <div className="flex justify-between items-center">
-            <div className="flex-1" onContextMenu={(e) => e.preventDefault()}>
+            <div className="flex md:flex-1" onContextMenu={(e) => e.preventDefault()}>
                 <Image 
                     alt="pfp"
                     src="https://avatars.githubusercontent.com/u/96448965"
@@ -15,7 +15,7 @@ export default function Nav() {
                     className='rounded-2xl'
                 />
             </div>
-            <div className='flex gap-1 cursor-pointer' onContextMenu={(e) => e.preventDefault()}
+            <div className='hidden md:flex gap-1 cursor-pointer' onContextMenu={(e) => e.preventDefault()}
                 onClick={()=> window.open("https://youtu.be/D8sgmuthzlM", "_blank")}>
                 <Image 
                     alt="paws"
