@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 declare global {
   interface Window {
-    cursoreffects?: any;
+    cursoreffects?: {
+      fairyDustCursor: (options: { colors: string[] }) => void;
+    };
   }
 }
 
@@ -17,7 +19,7 @@ export default function CursorTrail() {
 
     script.onload = () => {
       if (window.cursoreffects) {
-        new window.cursoreffects.fairyDustCursor({
+        window.cursoreffects.fairyDustCursor({
           colors: ["#8a8a8a", "#616161", "#cccccc"]
         });
       }

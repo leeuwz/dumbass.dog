@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Audiowide, Geist, Geist_Mono, Sour_Gummy, Unbounded } from "next/font/google";
+import { Geist, Geist_Mono, Sour_Gummy, Unbounded } from "next/font/google";
 import "./globals.css";
 
 // components

@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image" 
 
 const projects = [
     {
@@ -10,7 +11,7 @@ const projects = [
     },
     {
         title: "komako",
-        description: "Github organisation hosting all komako's repositories and links to our old and current websites/projects.",
+        description: "Github organisation containing all the komako repositories and links to our current websites.",
         imageUrl: "/assets/komako-github.png",
         faviconUrl: "https://avatars.githubusercontent.com/u/130175090",
         link: "https://github.com/osukomako",
@@ -36,7 +37,8 @@ export default function Projects() {
                     >
                         {/* project favicon & title */}
                         <div className="flex items-center gap-4">
-                            <img className="rounded-xl"
+                            <Image
+                                className="rounded-xl"
                                 alt="project favicon"
                                 src={project.faviconUrl}
                                 width={64}
