@@ -39,8 +39,8 @@ export default function Discord() {
     const placeholderPfpUrl = "https://avatars.githubusercontent.com/u/96448965";
 
     return (
-        <>
-            <div className="flex items-center gap-6 hidden xl:flex">
+        <div className="hidden xl:flex xl:flex-col">
+            <div className="flex items-center gap-6">
                 <div className="flex flex-col text-end font-[family-name:var(--font-unbounded)] gap-1">
                     <p className="text-xl">@{loading ? placeholderUsername : status?.discord_user.username}</p>
                     <p className="text-sm">{loading ? placeholderStatus : status?.discord_status}</p>
@@ -114,6 +114,6 @@ export default function Discord() {
                     <div className="hidden" />
                 )}
             </div>
-        </>
+        </div>
     );
 }
