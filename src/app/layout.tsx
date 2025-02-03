@@ -5,6 +5,7 @@ import "./globals.css";
 // components
 import Nav from "./components/navigation/nav";
 import Footer from "./components/navigation/footer";
+import CursorTrail from "./components/CursorTrail";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${SourGummy.variable} ${Unbound.variable} antialiased relative`}
       >
+        <CursorTrail />
         <div className="absolute top-0 left-0 w-[40%] max-h-[300px] min-h-[300px] bg-[radial-gradient(ellipse,rgba(255,255,255,0.06)_1%,rgba(0,0,0,0)_60%)] pointer-events-none"
         style={{
           transform: "rotate(200deg) scale(1.5)",
