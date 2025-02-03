@@ -43,7 +43,7 @@ export default function Discord() {
             <p className="mb-4">Lanyard API return for <code className="bg-[#090909] rounded-xl p-1">{status?.discord_user.id}</code>:</p>
             <pre>{!loading && JSON.stringify(status, null, 4)}</pre>
         </div> */}
-        <div className="">
+        <div>
             {/* Discord User */}
             <div className="flex items-center gap-6">
                 {/* Discord User Info && Profile Picture */}
