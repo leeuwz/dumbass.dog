@@ -10,8 +10,8 @@ export default function Main() {
                 <div>
                     <p className="text-xl font-[family-name:var(--font-sour-gummy)]">
                     Mai name is lionz or dvmbassdog, hope you are doing well!<br/>
-                    I'm mainly known for clicking circles, striking the counter and being a silly pupper I guess..<br/>
-                    Oh yeah! I'm also quite a nerdy programmer, you can check some of my stuff out below.<br/>
+                    I&apos;m mainly known for clicking circles, striking the counter and being a silly pupper I guess..<br/>
+                    Oh yeah! I&apos;m also quite a nerdy programmer, you can check some of my stuff out below.<br/>
                     Other then that I like to work on
                     <a className="relative underline text-[#f97af8] hover:text-[#ff00ff] transition ml-1 
                     before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-full 
