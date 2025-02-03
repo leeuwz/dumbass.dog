@@ -20,4 +20,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* SCROLLBAR */
+/* Scrollbar styling for Chromium browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border-radius: 25px;
+}
+
 /* what's up puppies!! - @dvmbassdog */
