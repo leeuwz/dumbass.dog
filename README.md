@@ -1,4 +1,4 @@
-## komako::next (demo) ⏭️
+dumbass.dog 🐾🦴
 
 Silly personal website
 
