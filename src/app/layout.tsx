@@ -1,3 +1,4 @@
+'use client';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sour_Gummy, Unbounded } from "next/font/google";
 import "./globals.css";
@@ -6,6 +7,7 @@ import "./globals.css";
 import Nav from "./components/navigation/nav";
 import Footer from "./components/navigation/footer";
 import CursorTrail from "./components/CursorTrail";
+import { motion } from "framer-motion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,39 +35,6 @@ const Unbound = Unbounded({
 //   description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
 // };
 
-export const metadata: Metadata = {
-  title: "dumbass.dog 🐾🦴",
-  description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    type: "website",
-    url: "https://dumbass.dog",
-    title: "dumbass.dog 🐾🦴",
-    description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
-    images: [
-      {
-        url: "https://avatars.githubusercontent.com/u/96448965",
-        width: 400,
-        height: 400,
-        alt: "dumbass.dog icon",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary",
-    site: "@femd0g",
-    title: "dumbass.dog 🐾🦴",
-    description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
-    images: "https://avatars.githubusercontent.com/u/96448965",
-  },
-};
-
-export const viewport = {
-  themeColor: "#0c0c0c",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -77,15 +46,25 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${SourGummy.variable} ${Unbound.variable} antialiased relative`}
       >
         <CursorTrail />
-        <div className="absolute top-0 left-0 w-[40%] max-h-[300px] min-h-[300px] bg-[radial-gradient(ellipse,rgba(255,255,255,0.06)_1%,rgba(0,0,0,0)_60%)] pointer-events-none"
-        style={{
-          transform: "rotate(200deg) scale(1.5)",
-        }}></div>
-        <div className="max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)] p-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 5 }}
+          transition={{ duration: 2 }}
+          className="absolute top-0 left-0 w-[40%] max-h-[300px] min-h-[300px] bg-[radial-gradient(ellipse,rgba(255,255,255,0.06)_1%,rgba(0,0,0,0)_60%)] pointer-events-none"
+          style={{
+            transform: "rotate(200deg) scale(1.5)",
+          }}
+        ></motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)] p-10"
+        >
           <Nav />
           {children}
           <Footer />
-        </div>
+        </motion.div>
       </body>
     </html>
   );
