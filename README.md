@@ -1,4 +1,4 @@
-dumbass.dog 🐾🦴
+## dumbass.dog 🐾🦴
 
 Silly personal website
 
