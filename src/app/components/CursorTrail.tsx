@@ -38,19 +38,20 @@ export default function CursorTrail() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleClick = () => {
-      const audio = new Audio("/assets/click.mp3");
-      audio.volume = 0.5;
-      audio.play();
-    };
+  // mouse click sound fx
+  // useEffect(() => {
+  //   const handleClick = () => {
+  //     const audio = new Audio("/assets/click.mp3");
+  //     audio.volume = 0.5;
+  //     audio.play();
+  //   };
 
-    document.addEventListener("click", handleClick);
+  //   document.addEventListener("click", handleClick);
 
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("click", handleClick);
+  //   };
+  // }, []);
 
   return null;
 }
