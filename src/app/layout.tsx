@@ -1,5 +1,4 @@
 'use client';
-import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sour_Gummy, Unbounded } from "next/font/google";
 import "./globals.css";
 
