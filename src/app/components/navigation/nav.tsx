@@ -41,10 +41,21 @@ export default function Nav() {
                     <Image 
                         alt="twitter"
                         src="/icons/twitter.svg"
-                        width={24}
-                        height={24}
+                        width={18}
+                        height={18}
                         draggable={false}
-                        className='rounded-2xl invert-[100%]'
+                        className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
+                    />
+                </a>
+                <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
+                href="https://komako.pw/u/3" target='_blank'>
+                    <Image 
+                        alt="osu"
+                        src="/icons/osu.svg"
+                        width={18}
+                        height={18}
+                        draggable={false}
+                        className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
                     />
                 </a>
                 <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
@@ -52,21 +63,10 @@ export default function Nav() {
                     <Image 
                         alt="youtube"
                         src="/icons/youtube.svg"
-                        width={24}
-                        height={24}
+                        width={18}
+                        height={18}
                         draggable={false}
-                        className='rounded-2xl invert-[100%]'
-                    />
-                </a>
-                <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
-                href="mailto:lion@dumbass.dog">
-                    <Image 
-                        alt="mail"
-                        src="/icons/mail.svg"
-                        width={24}
-                        height={24}
-                        draggable={false}
-                        className='rounded-2xl invert-[100%]'
+                        className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
                     />
                 </a>
                 <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
@@ -74,10 +74,21 @@ export default function Nav() {
                     <Image 
                         alt="github"
                         src="/icons/github.svg"
-                        width={24}
-                        height={24}
+                        width={18}
+                        height={18}
                         draggable={false}
-                        className='rounded-2xl invert-[100%]'
+                        className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
+                    />
+                </a>
+                <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
+                href="mailto:lion@dumbass.dog">
+                    <Image 
+                        alt="mail"
+                        src="/icons/mail.svg"
+                        width={18}
+                        height={18}
+                        draggable={false}
+                        className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
                     />
                 </a>
             </div>
