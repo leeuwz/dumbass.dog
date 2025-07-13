@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://dumbass.dog",
     title: "dumbass.dog 🐾🦴",
-    description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
+    description: "dumb programmer, counter-strike enthusiast and monster ultra fueled dog.",
     images: [
       {
         url: "https://avatars.githubusercontent.com/u/96448965",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary",
     site: "@femd0g",
     title: "dumbass.dog 🐾🦴",
-    description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
+    description: "dumb programmer, counter-strike enthusiast and monster ultra fueled dog.",
     images: "https://avatars.githubusercontent.com/u/96448965",
   },
 };
@@ -38,7 +38,7 @@ export const viewport = {
 
 export default function Home() {
   return(
-    <div className="flex flex-col gap-20 py-20">
+    <div className="flex flex-col gap-12 py-20">
       <Hero />
       <Main />
       <Projects />
