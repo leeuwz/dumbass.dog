@@ -18,15 +18,7 @@ const projects = [
         faviconUrl: "https://avatars.githubusercontent.com/u/130175090",
         link: "https://github.com/osukomako",
         date: "12.05.2024"
-    },
-    {
-        tite: "nyuh.xyz",
-        description: "rebuilt oomf's site to be nextjs && not built using a site builder.",
-        imageUrl: "/assets/nyuh-github.png",
-        faviconUrl: "/assets/nyuhfavicon.png",
-        link: "https://nyuh.xyz",
-        date: "25.08.2025"
-    }
+    },  
 ];
 
 export default function Projects() {
