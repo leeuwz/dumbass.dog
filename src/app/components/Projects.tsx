@@ -5,11 +5,14 @@ import { useState } from "react"
 const projects = [
     {
         title: "komako::next ⏭️",
-        description: "Demo website of our plans for komako. If you plan to visit; press the info button to learn more.",
-        imageUrl: "/assets/crop-next-komako.png",
+        description: "Demo website of our plans for komako.",
+        imageUrl: "/assets/crop-next-komako2.png",
         faviconUrl: "https://next.komako.pw/favicon.ico",
         link: "https://next.komako.pw",
-        date: "24.01.2025"
+        date: "18.10.2025",
+        bgPosition: 'right 26%',
+        // 0 = fully bright image, 1 = fully dark overlay. Use values between 0 and 1
+        bgBrightness: 1.0
     },
     {
         title: "komako",
@@ -17,7 +20,9 @@ const projects = [
         imageUrl: "/assets/komako-github.png",
         faviconUrl: "https://avatars.githubusercontent.com/u/130175090",
         link: "https://github.com/osukomako",
-        date: "12.05.2024"
+        date: "12.05.2024",
+        bgPosition: 'center 30%',
+        bgBrightness: 0.9
     },  
 ];
 
@@ -56,10 +61,10 @@ export default function Projects() {
                         key={index}
                         className="relative flex flex-col gap-8 rounded-xl border-[2px] border-zinc-800 p-6 hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
                         style={{
-                            backgroundImage: `linear-gradient(to bottom left, transparent, rgba(12, 12, 12, 0.8) 40%, rgba(12, 12, 12, 1) 100%), url("${project.imageUrl}")`,
+                            backgroundImage: `linear-gradient(to bottom left, transparent, rgba(12, 12, 12, ${0.8 * (project.bgBrightness ?? 1)}) 40%, rgba(12, 12, 12, ${1 * (project.bgBrightness ?? 1)}) 100%), url("${project.imageUrl}")`,
                             backgroundSize: 'cover',
                             backgroundRepeat: "no-repeat",
-                            backgroundPosition: 'calc(100%)40%'
+                            backgroundPosition: project.bgPosition || 'calc(100%)40%'
                         }}
                         onClick={() => window.open(project.link, "_blank")}
                     >
