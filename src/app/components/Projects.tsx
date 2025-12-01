@@ -3,17 +3,17 @@ import Image from "next/image"
 import { useState } from "react" 
 
 const projects = [
-    {
-        title: "komako::next ⏭️",
-        description: "Demo website of our plans for komako.",
-        imageUrl: "/assets/crop-next-komako2.png",
-        faviconUrl: "https://next.komako.pw/favicon.ico",
-        link: "https://next.komako.pw",
-        date: "18.10.2025",
-        bgPosition: 'right 26%',
-        // 0 = fully bright image, 1 = fully dark overlay. Use values between 0 and 1
-        bgBrightness: 1.0
-    },
+    // {
+    //     title: "komako::next ⏭️",
+    //     description: "Demo website of our plans for komako.",
+    //     imageUrl: "/assets/crop-next-komako2.png",
+    //     faviconUrl: "https://next.komako.pw/favicon.ico",
+    //     link: "https://next.komako.pw",
+    //     date: "18.10.2025",
+    //     bgPosition: 'right 26%',
+    //     // 0 = fully bright image, 1 = fully dark overlay. Use values between 0 and 1
+    //     bgBrightness: 1.0
+    // },
     {
         title: "komako",
         description: "Github organisation containing all the komako repositories and links to our current websites.",
