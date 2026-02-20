@@ -4,7 +4,7 @@ import Projects from "./components/Projects"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "dumbass.dog 🐾🦴",
+  title: "doggirl.wiki 🐾🦴",
   description: "Silly programmer nerd, Counter-Strike enthusiast and Monster Ultra fueled dog.",
   icons: {
     icon: "/favicon.ico",
@@ -12,21 +12,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://dumbass.dog",
-    title: "dumbass.dog 🐾🦴",
+    title: "doggirl.wiki 🐾🦴",
     description: "dumb programmer, counter-strike enthusiast and monster ultra fueled dog.",
     images: [
       {
         url: "https://avatars.githubusercontent.com/u/96448965",
         width: 400,
         height: 400,
-        alt: "dumbass.dog icon",
+        alt: "doggirl.wiki icon",
       },
     ],
   },
   twitter: {
     card: "summary",
     site: "@femd0g",
-    title: "dumbass.dog 🐾🦴",
+    title: "doggirl.wiki 🐾🦴",
     description: "dumb programmer, counter-strike enthusiast and monster ultra fueled dog.",
     images: "https://avatars.githubusercontent.com/u/96448965",
   },
