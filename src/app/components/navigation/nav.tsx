@@ -80,7 +80,7 @@ export default function Nav() {
                         className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
                     />
                 </a>
-                <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
+                {/* <a className='flex items-center cursor-pointer rounded-xl border-[1.8px] border-zinc-800 p-2 hover:bg-zinc-800 hover:scale-[1.1] transition-all duration-50 ease-in-out'
                 href="mailto:lion@dumbass.dog">
                     <Image 
                         alt="mail"
@@ -90,7 +90,7 @@ export default function Nav() {
                         draggable={false}
                         className='rounded-2xl invert-[100%] md:w-[24px] md:h-[24px]'
                     />
-                </a>
+                </a> */}
             </div>
         </div>
     )
