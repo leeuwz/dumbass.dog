@@ -1,14 +1,23 @@
 'use client';
 
 import Image from 'next/image';
+import { useLanyard } from 'react-use-lanyard';
+
+//backup pfp if lanyard api is unavailble
+const placeholderPfpUrl = "https://avatars.githubusercontent.com/u/96448965";
 
 export default function Nav() {
+    const { loading, status } = useLanyard({
+        userId: "673304389875925003",
+        socket: true,
+    });
+
     return (
         <div className="flex justify-between items-center">
             <div className="flex md:flex-1" onContextMenu={(e) => e.preventDefault()}>
                 <Image 
                     alt="pfp"
-                    src="https://avatars.githubusercontent.com/u/96448965"
+                    src={loading ? placeholderPfpUrl : `https://cdn.discordapp.com/avatars/${status?.discord_user.id}/${status?.discord_user.avatar}` || placeholderPfpUrl}
                     width={50}
                     height={50}
                     draggable={false}
