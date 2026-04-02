@@ -25,7 +25,7 @@ export default function Nav() {
                 />
             </div>
             <div className='hidden md:flex gap-1 cursor-pointer' onContextMenu={(e) => e.preventDefault()}
-                onClick={()=> window.open("https://youtu.be/omAQMOHtfys", "_blank")}>
+                onClick={()=> window.open("https://youtu.be/FO9PaaLAhBQ", "_blank")}>
                 <Image 
                     alt="paws"
                     src="/emojis/paws.svg"
