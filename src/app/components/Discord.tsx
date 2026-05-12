@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useLanyard } from "react-use-lanyard";
+import { motion, AnimatePresence } from "framer-motion";
 
 function myDateAndTime() {
     return new Date().toLocaleString("en-EN", {
@@ -42,55 +43,85 @@ export default function Discord() {
         <div className="hidden xl:flex xl:flex-col">
             <div className="flex items-center gap-6">
                 <div className="flex flex-col text-end font-[family-name:var(--font-unbounded)] gap-1">
-                    <p className="text-xl">@{loading ? placeholderUsername : status?.discord_user.username}</p>
-                    <p className="text-sm">{loading ? placeholderStatus : status?.discord_status}</p>
-                    <p className="text-sm">
-                        <span id="dateTime">{placeholderTime}</span>
-                    </p>
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={loading ? "loading-text" : "loaded-text"}
+                            initial={{ opacity: 0, y: 5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -5 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex flex-col gap-1"
+                        >
+                            <p className="text-xl">@{loading ? placeholderUsername : status?.discord_user.username}</p>
+                            <p className="text-sm">{loading ? placeholderStatus : status?.discord_status}</p>
+                            <p className="text-sm">
+                                <span id="dateTime">{placeholderTime}</span>
+                            </p>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
-                <div>
-                    {loading ? (
-                        <img
-                            className="rounded-2xl"
-                            alt="Placeholder"
-                            src={placeholderPfpUrl}
-                            width={128}
-                            height={128}
-                        />
-                    ) : status?.activities.some(activity => activity.name === "Spotify") ? (
-                        <a href={`https://open.spotify.com/track/${status?.spotify?.track_id}`} target="_blank">
-                            <img
-                                className="rounded-2xl"
-                                alt="spotify"
-                                src={status?.spotify?.album_art_url || placeholderPfpUrl}
-                                width={128}
-                                height={128}
-                            />
-                        </a>
-                    ) : status?.activities.some(activity => activity.name === "Visual Studio Code") ? (
-                        <img
-                            className="rounded-2xl"
-                            alt="vscode"
-                            src={`https://cdn.discordapp.com/app-assets/${status?.activities.find(activity => activity.name === "Visual Studio Code")?.application_id}/${status?.activities.find(activity => activity.name === "Visual Studio Code")?.assets?.large_image}.png`}
-                            width={128}
-                            height={128}
-                        />
-                    ) : (
-                        <img
-                            className="rounded-2xl"
-                            alt="profile"
-                            src={`https://cdn.discordapp.com/avatars/${status?.discord_user.id}/${status?.discord_user.avatar}` || placeholderPfpUrl}
-                            width={128}
-                            height={128}
-                        />
-                    )}
+                <div className="relative w-[128px] h-[128px]">
+                    <AnimatePresence mode="popLayout">
+                        <motion.div
+                            key={loading ? "loading" : "loaded"}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute inset-0"
+                        >
+                            {loading ? (
+                                <img
+                                    className="rounded-2xl w-full h-full object-cover"
+                                    alt="Placeholder"
+                                    src={placeholderPfpUrl}
+                                    width={128}
+                                    height={128}
+                                />
+                            ) : status?.activities.some(activity => activity.name === "Spotify") ? (
+                                <a href={`https://open.spotify.com/track/${status?.spotify?.track_id}`} target="_blank" rel="noreferrer">
+                                    <img
+                                        className="rounded-2xl w-full h-full object-cover"
+                                        alt="spotify"
+                                        src={status?.spotify?.album_art_url || placeholderPfpUrl}
+                                        width={128}
+                                        height={128}
+                                    />
+                                </a>
+                            ) : status?.activities.some(activity => activity.name === "Visual Studio Code") ? (
+                                <img
+                                    className="rounded-2xl w-full h-full object-cover"
+                                    alt="vscode"
+                                    src={`https://cdn.discordapp.com/app-assets/${status?.activities.find(activity => activity.name === "Visual Studio Code")?.application_id}/${status?.activities.find(activity => activity.name === "Visual Studio Code")?.assets?.large_image}.png`}
+                                    width={128}
+                                    height={128}
+                                />
+                            ) : (
+                                <img
+                                    className="rounded-2xl w-full h-full object-cover"
+                                    alt="profile"
+                                    src={`https://cdn.discordapp.com/avatars/${status?.discord_user.id}/${status?.discord_user.avatar}` || placeholderPfpUrl}
+                                    width={128}
+                                    height={128}
+                                />
+                            )}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
 
-            <div className="flex justify-end mt-2 font-[family-name:var(--font-sour-gummy)]">
-                {loading ? (
-                    <p>{placeholderActivity}</p>
-                ) : status?.activities.some(activity => activity.name !== "Spotify" && activity.name !== "Custom Status" && activity.name !== "Visual Studio Code") ? (
+            <div className="flex justify-end mt-2 font-[family-name:var(--font-sour-gummy)] h-6">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={loading ? "loading-activity" : "loaded-activity"}
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 5 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        {loading ? (
+                            <p>{placeholderActivity}</p>
+                        ) : status?.activities.some(activity => activity.name !== "Spotify" && activity.name !== "Custom Status" && activity.name !== "Visual Studio Code") ? (
                     <p>
                         {`playing ${status?.activities.find(activity => activity.name !== "Spotify" && activity.name !== "Custom Status")?.name}`.length > 25
                             ? `${`playing ${status?.activities.find(activity => activity.name !== "Spotify" && activity.name !== "Custom Status")?.name}`.substring(0, 25)}..`
@@ -113,6 +144,8 @@ export default function Discord() {
                 ) : (
                     <div className="hidden" />
                 )}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );
