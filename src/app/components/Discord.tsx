@@ -37,7 +37,7 @@ export default function Discord() {
     const placeholderUsername = "lionz";
     const placeholderStatus = "offline";
     const placeholderActivity = "";
-    const placeholderPfpUrl = "https://avatars.githubusercontent.com/u/96448965";
+    const placeholderPfpUrl = "/assets/pfp.jpg";
 
     return (
         <div className="hidden xl:flex xl:flex-col">

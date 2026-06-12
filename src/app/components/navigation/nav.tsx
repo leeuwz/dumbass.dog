@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useLanyard } from 'react-use-lanyard';
 
 //backup pfp if lanyard api is unavailble
-const placeholderPfpUrl = "https://avatars.githubusercontent.com/u/96448965";
+const placeholderPfpUrl = "/assets/pfp.jpg";
 
 export default function Nav() {
     const { loading, status } = useLanyard({
